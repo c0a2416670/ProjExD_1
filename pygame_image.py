@@ -38,7 +38,11 @@ def main():
         if key_lst[pg.K_RIGHT]:#練習１０.４
             kk_rct.move_ip((1, 0))
 
+        else:#演習１
+            kk_rct.move_ip((-1, 0))
+
         x = tmr%3200 #練習６ 練習９
+       
         screen.blit(bg_img, [-x, 0]) #練習６
         screen.blit(bg_img2, [-x+1600 ,0])#練習７
         screen.blit(bg_img, [-x+3200, 0])#練習９
