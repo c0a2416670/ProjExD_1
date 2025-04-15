@@ -20,6 +20,7 @@ def main():
         
         x = tmr
         screen.blit(bg_img, [-x, 0]) #練習６
+        screen.blit(bg_img, [-x+1600 ,0])#練習７
         screen.blit(kk_img, [300, 200])
         pg.display.update()
         tmr += 1        
