@@ -26,20 +26,26 @@ def main():
             if event.type == pg.QUIT: return
 
         key_lst = pg.key.get_pressed()#練習１０.４
+       
         if key_lst[pg.K_UP]:#練習１０.４
-            kk_rct.move_ip((0, -1))
+            a = -1
+            b = -1
 
-        if key_lst[pg.K_DOWN]:#練習１０.４
-            kk_rct.move_ip((0, 1))
+        elif key_lst[pg.K_DOWN]:#練習１０.４
+            a = -1
+            b = +1
 
-        if key_lst[pg.K_LEFT]:#練習１０.４
-            kk_rct.move_ip((-1, 0))
+        elif key_lst[pg.K_LEFT]:#練習１０.４
+            a = -2
+            b = 0
 
-        if key_lst[pg.K_RIGHT]:#練習１０.４
-            kk_rct.move_ip((1, 0))
-
-        else:#演習１
-            kk_rct.move_ip((-1, 0))
+        elif key_lst[pg.K_RIGHT]:#練習１０.４
+            a = +1
+            b = 0
+        elif not key_lst[pg.K_RIGHT]:
+            a = -1
+            b = 0
+        kk_rct.move_ip((a, b))#演習２
 
         x = tmr%3200 #練習６ 練習９
        
