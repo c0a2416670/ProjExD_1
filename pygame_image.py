@@ -11,7 +11,7 @@ def main():
     clock  = pg.time.Clock()
     bg_img = pg.image.load("../fig/pg_bg.jpg")
     kk_img = pg.image.load("../fig/3.png") #練習１
-    kk_img = pg.transform.flip(kk_img, True, False)
+    kk_img = pg.transform.flip(kk_img, True, False) #練習２
     kk_img = pg.transform.rotozoom(kk_img, 10,1.0)
     tmr = 0
     while True:
@@ -22,7 +22,7 @@ def main():
         screen.blit(kk_img, [300, 200])
         pg.display.update()
         tmr += 1        
-        clock.tick(10)
+        clock.tick(200)#練習５
 
 
 if __name__ == "__main__":
